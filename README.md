@@ -1,8 +1,8 @@
 ![Image description](https://i1.faceprep.in/ProGrad/face-logo-resized.png)
 
-# ProGrad Lab | Complete Full Stack 
-Develop a complete application with Jsp,Servlets & Hibernate.
+# ProGrad Lab | Full Stack Application Using Hibernate
 
+Develop a complete application with Jsp, Servlets & Hibernate.
 
 ## What Should You Do
 ```
@@ -34,7 +34,7 @@ And finally, create a pull request so your ProGrad Mentor (PM) can review your w
 
 ## Progression 3: Sessions and Cookie
   - Maintain the user session from login till logout.
-  - Store the user name is the cookie.
+  - Store the user name in the cookie.
 
 ## Progression 4: Functional Requirements
   - Identify core business functionalities of the application. (Minimum 5)
@@ -47,7 +47,7 @@ And finally, create a pull request so your ProGrad Mentor (PM) can review your w
   
 ## Progression 7: Views - UI
   - Identify the appropriate views for your application.
-  - You view should contain a mandatory home page,from which you can navigate to other pages.
+  - Your view should contain a mandatory home page from which you can navigate to other pages.
   - Profession look and feel is mandatory.
 
 ## Final Deliverable:
