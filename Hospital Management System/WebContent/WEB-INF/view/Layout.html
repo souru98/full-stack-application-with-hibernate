@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerFragment">
+
+<!-- CSS Files -->
+	<link type="text/css" href="/resources/css/styles.css" rel="stylesheet"></link>
+	
+
+
+<title>Hospital</title>
+</head>
+
+<body class="noheader">
+
+	<div id="container" th:fragment="defaultFragment">
+
+		<div id="header">
+			<div id="top-navigation" align="right">
+				<label style="color:#C0C0C0">Welcome&nbsp;<strong> <!-- #C0C0C0 -->
+				<span th:text="${beans.utilities.getFullName()}"></span></strong></label> | 
+				<!-- <a th:href="@{/main/resetPassword}">Reset Password</a> -->
+			</div>
+			<h1>
+				<a href="/"></a>
+			</h1>
+			<h2>HOSPITAL MANAGEMENT SYSTEM</h2>
+			<div class="clear"></div>
+		</div>
+
+		<div id="nav" th:switch="${beans.utilities.getLoginRole()}">
+
+			<!-- ******************************************* For Admin ***********************************************************-->
+			
+			<ul class="sf-menu dropdown sf-js-enabled sf-shadow" th:case="'Admin'">
+				<li class=""><a class="has_submenu" href="">Pharmacy</a>
+					<ul>
+						<li><a href="/main/dailyAccountOfOperationSection">Daily Account Of Operation Section</a></li>
+						<li><a href="/main/dailyAccountOfPharmacy">Daily account of Pharmacy</a></li>
+						<li><a href="/main/monthlyStatementOfOperationSectionPharmacy">Monthly Statement Of Operation Section</a></li>
+						<li><a href="/main/monthlyAccountOfPharmacy">Monthly Account Of Pharmacy</a></li>
+						<li><a href="/main/stockBalanceOfPharmacy">Stock Balance Of Pharmacy</a></li>
+						<li><a href="/main/statementOfCompany">Statement Of Company</a></li>			
+					</ul>
+				</li>
+				<li class=""><a class="has_submenu" href="">Pathology</a>
+					<ul>
+						<li><a href="/main/admissionForm">Admission Form</a></li>
+						<li><a href="/main/financialDetailsOfPathology">Financial Details Of Pathology</a></li>
+						<li><a href="/main/monthlyStatementOfOperationSectionPathology">Monthly Statement Of Operation Section</a></li>
+						<li><a href="/main/pathology">Pathology</a></li>
+					</ul>
+				</li>
+				<li class=""><a class="has_submenu" href="">Report</a>	
+					
+				</li>
+				<li class=""><a class="has_submenu" href="">Setup</a>
+					<ul>
+						<li><a href="/main/userForm">User Setup</a></li>
+						<li><a href="/main/resetPassword">Reset Password</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+	<div id="footer" th:fragment="footerFragment">
+	    <div id="footer-links">
+	            </div>  
+	</div>
+</body>
+</html>
